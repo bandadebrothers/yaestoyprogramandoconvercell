@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Check, Rocket, Sparkles } from 'lucide-react'
+import { Check, GitBranch, Rocket, Sparkles } from 'lucide-react'
 import { Confetti } from '@/components/confetti'
 import { Button } from '@/components/ui/button'
 
@@ -73,12 +73,12 @@ export default function Page() {
         </h1>
 
         <p className="mt-6 max-w-xl text-pretty text-base leading-relaxed text-white/60 sm:text-lg">
-          Creé mi cuenta de v0 y Vercel, conecté mi usuario de GitHub y ya tengo
-          todo lo que necesito para empezar a construir. Que empiece la
-          diversión.
+          Creé mi cuenta de v0 y Vercel, conecté mi usuario de GitHub y mi
+          proyecto ya está enlazado al repositorio. Todo listo para empezar a
+          construir. Que empiece la diversión.
         </p>
 
-        <div className="mt-12 grid w-full gap-4 sm:grid-cols-2">
+        <div className="mt-12 grid w-full gap-4 sm:grid-cols-2 lg:grid-cols-3">
           <AchievementCard
             icon={<Rocket className="size-6" />}
             label="Cuenta creada"
@@ -90,6 +90,12 @@ export default function Page() {
             label="Cuenta conectada"
             title="Usuario de GitHub"
             description="Mi código versionado y sincronizado, listo para colaborar."
+          />
+          <AchievementCard
+            icon={<GitBranch className="size-6" />}
+            label="Repo enlazado"
+            title="Proyecto en GitHub"
+            description="Mi proyecto ya está conectado a GitHub y sincroniza cada cambio."
           />
         </div>
 
